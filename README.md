@@ -4,20 +4,20 @@ A baseline to render a React application on server-side
 
 ## Usage
 
-You need to build the client and server before all
+First of all it's necessary to build the client and server
 
 ```
 npm run build
 ```
 
-Once done you can start serving requests
+Once done you can start the server
 
 ```
-npm run serve
+npm run start
 ```
 
 You can make changes to the client or server and view them without repeating the steps above
 
 ```
-npm run start
+npm run dev
 ```
