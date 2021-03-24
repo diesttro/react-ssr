@@ -6,10 +6,10 @@
     "build:server": "webpack --config webpack.server.js --mode production",
     "build": "run-s clean build:*",
     "clean": "rimraf dist",
-    "serve": "node dist/server.js",
-    "start:client": "webpack --config webpack.client.js --mode development --watch",
-    "start:server": "webpack --config webpack.server.js --mode development --watch",
-    "start": "run-p start:*"
+    "dev:client": "webpack --config webpack.client.js --mode development --watch",
+    "dev:server": "webpack --config webpack.server.js --mode development --watch",
+    "dev": "run-p dev:*",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
