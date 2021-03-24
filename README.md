@@ -1,22 +1,22 @@
 # React Server-Side Rendering
 
-Render a React app on server-side first
+A baseline to render a React application on server-side
 
 ## Usage
 
-You need to build the server and client first
+You need to build the client and server before all
 
 ```
 npm run build
 ```
 
-Once done you can get the server up
+Once done you can start serving requests
 
 ```
 npm run serve
 ```
 
-If you want to make changes and see them without having to repeat the previous steps
+You can make changes to the client or server and view them without repeating the steps above
 
 ```
 npm run start
