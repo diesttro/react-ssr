@@ -5,7 +5,7 @@ import ReactDOMServer from 'react-dom/server';
 import App from '../client/components/App';
 
 const app = express();
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
 
@@ -16,6 +16,7 @@ app.get('/', (request, response) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>React SSR</title>
+        <link href="/assets/styles.css" rel="stylesheet" />
       </head>
       <body>
         <div id="root">
@@ -30,6 +31,6 @@ app.get('/', (request, response) => {
   response.send(`<!doctype html>${html}`);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });

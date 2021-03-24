@@ -11,6 +11,15 @@ const serverConfig = {
     filename: 'server.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'ignore-loader',
+      },
+    ],
+  },
   externals: [webpackNodeExternals()],
   plugins: [new NodemonPlugin()],
 };
