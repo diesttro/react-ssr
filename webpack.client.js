@@ -13,9 +13,9 @@ const clientConfig = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(css|s[ac]ss)$/,
         exclude: /node_modules/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],
   },

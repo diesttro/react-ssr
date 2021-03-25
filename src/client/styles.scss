@@ -1,7 +1,11 @@
-@import '../../node_modules/modern-normalize/modern-normalize.css';
+@import 'modern-normalize/modern-normalize.css';
+
+$light-gray: #f8f9fa;
+$blue: #0065ff;
+$yellow: #ffba00;
 
 body {
-  background-color: #f8f9fa;
+  background-color: $light-gray;
 }
 
 h1 {
@@ -23,33 +27,33 @@ h1 {
 
 .button-group {
   padding: 1rem 0;
-}
 
-.button-group > button {
-  margin: 0 0.5rem;
+  & > button {
+    margin: 0 0.5rem;
+  }
 }
 
 .button {
-  background-color: #00a6fb;
+  background-color: $blue;
   border: none;
   border-radius: 0.25rem;
-  color: #f8f9fa;
+  color: $light-gray;
   font-weight: 500;
   padding: 1rem 1.75rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-}
 
-.button--decrease {
-  background-color: #fec601;
-}
+  &:hover {
+    opacity: 0.9;
+  }
 
-.button:hover {
-  opacity: 0.9;
-}
+  &:focus {
+    outline: none;
+  }
 
-.button:focus {
-  outline: none;
+  &--decrease {
+    background-color: $yellow;
+  }
 }

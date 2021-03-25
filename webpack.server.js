@@ -14,7 +14,7 @@ const serverConfig = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(css|s[ac]ss)$/,
         exclude: /node_modules/,
         loader: 'ignore-loader',
       },
