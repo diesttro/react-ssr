@@ -4,19 +4,19 @@ import '../styles.scss';
 const App = () => {
   const [count, setCount] = useState(0);
 
-  const increase = () => setCount((count) => ++count);
-  const decrease = () => setCount((count) => --count);
+  const increment = () => setCount((count) => ++count);
+  const decrement = () => setCount((count) => --count);
 
   return (
     <div className="container">
       <h1>Counter</h1>
       <span className="count">{count}</span>
       <div className="button-group">
-        <button className="button" onClick={increase}>
-          Increase
+        <button className="button" onClick={increment}>
+          Increment
         </button>
-        <button className="button button--decrease" onClick={decrease}>
-          Decrease
+        <button className="button button--outline" onClick={decrement}>
+          Decrement
         </button>
       </div>
     </div>
