@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 app.use(compression());
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
 
-app.get('/', (request, response) => {
+app.get('/', (_, response) => {
   const root = (
     <html>
       <head>

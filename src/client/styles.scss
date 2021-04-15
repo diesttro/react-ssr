@@ -1,10 +1,13 @@
 @import 'modern-normalize/modern-normalize.css';
 
-$gray: #f8f9fa;
-$blue: #0037ff;
+$dark: #161a1d;
+$light: #f8f9fa;
+$primary: #4361ee;
+$secondary: #ff7900;
 
 body {
-  background-color: $gray;
+  background-color: $light;
+  color: $dark;
 }
 
 h1 {
@@ -24,7 +27,7 @@ h1 {
 }
 
 .button-group {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 
   & > button {
     margin: 0 0.5rem;
@@ -32,12 +35,12 @@ h1 {
 }
 
 .button {
-  background-color: $blue;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  color: $gray;
+  color: $light;
   cursor: pointer;
   display: inline-block;
+  font-size: 1.125rem;
   font-weight: 500;
   padding: 1rem 1.5rem;
   text-align: center;
@@ -50,15 +53,9 @@ h1 {
   &:focus {
     outline: none;
   }
+}
 
-  &--outline {
-    background-color: $gray;
-    border: 1px solid $blue;
-    color: $blue;
-
-    &:hover {
-      background-color: $blue;
-      color: $gray;
-    }
-  }
+.bg {
+  &-primary { background-color: $primary; }
+  &-secondary { background-color: $secondary; }
 }
