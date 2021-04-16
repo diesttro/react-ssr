@@ -8,9 +8,13 @@ import App from '../client/components/App';
 
 const app = express();
 const port = process.env.PORT || 3000;
+const cacheTimeInMs = 1000 * 60 * 2;
 
 app.use(compression());
-app.use('/assets', express.static(path.join(__dirname, '/assets')));
+app.use(
+  '/assets',
+  express.static(path.join(__dirname, '/assets'), { maxAge: cacheTimeInMs })
+);
 
 app.get('*', (request, response) => {
   const root = (
