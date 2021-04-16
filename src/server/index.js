@@ -3,6 +3,7 @@ import compression from 'compression';
 import path from 'path';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
 import App from '../client/components/App';
 
 const app = express();
@@ -11,7 +12,7 @@ const port = process.env.PORT || 3000;
 app.use(compression());
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
 
-app.get('/', (_, response) => {
+app.get('*', (request, response) => {
   const root = (
     <html>
       <head>
@@ -22,7 +23,9 @@ app.get('/', (_, response) => {
       </head>
       <body>
         <div id="root">
-          <App />
+          <StaticRouter location={request.url}>
+            <App />
+          </StaticRouter>
         </div>
         <script src="/assets/bundle.js" />
       </body>

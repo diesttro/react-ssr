@@ -1,26 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import Counter from './Counter';
 import '../styles.scss';
 
-const App = () => {
-  const [count, setCount] = useState(0);
-
-  const increment = () => setCount((count) => ++count);
-  const decrement = () => setCount((count) => --count);
-
-  return (
-    <div className="container">
-      <h1>Counter</h1>
-      <span className="count">{count}</span>
-      <div className="button-group">
-        <button className="button bg-primary" onClick={increment}>
-          Increment
-        </button>
-        <button className="button bg-secondary" onClick={decrement}>
-          Decrement
-        </button>
-      </div>
-    </div>
-  );
-};
+const App = () => (
+  <Switch>
+    <Route path="/counter">
+      <Counter />
+    </Route>
+    <Route path="/">
+      <Home />
+    </Route>
+  </Switch>
+);
 
 export default App;
