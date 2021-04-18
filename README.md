@@ -1,24 +1,22 @@
-# React Server-Side Rendering
+# React SSR
 
-A baseline to render a React app on server-side.
-
-Note that depending on your app needs you may have to add loaders and other stuff.
+A basic React server-side rendering for learning purposes.
 
 ## Usage
 
-Before start make the client and server build.
+Build the client and server.
 
 ```
 npm run build
 ```
 
-Once done run the server.
+Start the server.
 
 ```
 npm run start
 ```
 
-Furthermore make changes on the client or server and view them with a single command.
+Make changes to the code and view them by refreshing the page.
 
 ```
 npm run dev
